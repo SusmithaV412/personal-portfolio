@@ -31,9 +31,6 @@ A responsive and modern portfolio website showcasing my skills, projects, and ex
 - **HTML5**: Semantic markup structure
 - **CSS3**: Custom styling and animations
 - **JavaScript**: Interactive functionality
-- **TailwindCSS**: Utility-first CSS framework
-- **Font Awesome**: Icon library
-- **Google Fonts**: Inter font family
 
 ## 📁 Project Structure
 
