@@ -51,74 +51,6 @@ Modern Portfolio/
 └── README.md              # Project documentation
 ```
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Local web server (optional, for best experience)
-
-### Installation
-
-1. **Clone or Download**
-   ```bash
-   git clone <repository-url>
-   cd Modern Portfolio
-   ```
-
-2. **Open Locally**
-   - Double-click `index.html` to open in browser
-   - Or use Live Server extension in VS Code
-
-3. **Using Live Server (Recommended)**
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx serve .
-   ```
-
-## 📱 Sections Overview
-
-### 🏠 Home Section
-- Personal introduction and tagline
-- Call-to-action buttons
-- Social media links
-- Animated profile image
-
-### 👤 About Section
-- Personal background and interests
-- Contact information grid
-- Resume download button
-- Professional image
-
-### 🎓 Education Section
-- Interactive timeline design
-- Academic achievements
-- CGPA highlighting
-- Institution details
-
-### 💼 Skills Section
-- **Software Skills**: Python, Java, HTML, CSS, JavaScript
-- **Data Skills**: SQL, Power BI
-- **Design Skills**: Figma
-- **Languages**: English, Tamil
-
-### 🏆 Certifications Section
-- Data Analytics Traineeship (Maiyyam)
-- UI/UX Design Traineeship (Maiyyam)
-- Full Stack MERN Development (Maiyyam)
-
-### 🚀 Projects Section
-1. **Concert Ticket Booking** - Python desktop application
-2. **Farm2School** - Web application connecting farms and schools
-3. **Smart Medicine Reminder** - Java Swing healthcare application
-
-### 📞 Contact Section
-- Centralized contact container
-- Social media icons
-- Copy-to-clipboard functionality
-- Professional links
 
 ## 🎨 Customization
 
@@ -153,22 +85,6 @@ The portfolio is fully responsive with breakpoints:
 - ✅ Safari (Latest)
 - ✅ Edge (Latest)
 
-## 📈 Performance Features
-
-- Optimized images and assets
-- Minimal JavaScript for fast loading
-- CDN-hosted libraries (TailwindCSS, Font Awesome)
-- Efficient CSS animations
-
-## 🤝 Contributing
-
-This is a personal portfolio project, but suggestions and feedback are welcome!
-
-1. Fork the project
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
 
 ## 📄 License
 
@@ -177,32 +93,9 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👨💻 Author
 
 **Susmitha V**
-- 🎓 MSc Data Science Student at Coimbatore Institute of Technology
-- 📧 Email: susmitha.vcsc@gmail.com
-- 📱 Phone: +91 7418266029
-- 🔗 LinkedIn: [susmitha-vijayakumar-174a76355](https://linkedin.com/in/susmitha-vijayakumar-174a76355)
-- 📷 Instagram: [@_.susmithavijayakumar._](https://instagram.com/_.susmithavijayakumar._)
-- 💻 GitHub: [@SusmithaV412](https://github.com/SusmithaV412)
+- 🔗 LinkedIn: [susmitha-vijayakumar-174a76355]
+- 💻 GitHub: [@SusmithaV412]
 
-## 🙏 Acknowledgments
 
-- **TailwindCSS** for the utility-first CSS framework
-- **Font Awesome** for the comprehensive icon library
-- **Google Fonts** for the beautiful Inter font family
-- **Unsplash** for high-quality stock images
-- **TopFlight Apps** for the medicine reminder app banner
-
-## 📊 Project Stats
-
-- **Lines of Code**: ~800+ HTML/CSS/JS
-- **Sections**: 7 main sections
-- **Projects Featured**: 3 projects
-- **Certificates**: 3 certifications
-- **Skills Categories**: 4 categories
-- **Responsive Breakpoints**: 3 breakpoints
-
----
-
-⭐ **If you like this portfolio, please give it a star!** ⭐
 
 *Last updated: November 2025*
