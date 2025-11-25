@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susmitha Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#7e22ce',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-slate-200">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-darker/80 backdrop-blur-sm z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">Portfolio</a>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-slate-200 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link active border-r-2 border-blue-500 pr-8">Home</a>
+                    <a href="#about" class="nav-link border-r-2 border-blue-500 pr-8">About</a>
+                    <a href="#education" class="nav-link border-r-2 border-blue-500 pr-8">Education</a>
+                    <a href="#skills" class="nav-link border-r-2 border-blue-500 pr-8">Skills</a>
+                    <a href="#certificates" class="nav-link border-r-2 border-blue-500 pr-8">Certificates</a>
+                    <a href="#projects" class="nav-link border-r-2 border-blue-500 pr-8">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+                <a href="#home" class="block py-2 nav-link active">Home</a>
+                <a href="#about" class="block py-2 nav-link">About</a>
+                <a href="#education" class="block py-2 nav-link">Education</a>
+                <a href="#skills" class="block py-2 nav-link">Skills</a>
+                <a href="#certificates" class="block py-2 nav-link">Certificates</a>
+                <a href="#projects" class="block py-2 nav-link">Projects</a>
+                <a href="#contact" class="block py-2 nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Susmitha V</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-slate-300">Student at CIT</h2>
+                <p class="text-lg mb-8 text-slate-400 max-w-lg">
+                    Pursuing an Integrated Masters in Data Science with a strong interest in analytics, visualization, and problem-solving.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-6 py-3 rounded-full btn-primary font-medium">Let's Connect</a>
+                    <a href="#projects" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">View Work</a>
+                </div>
+                <div class="mt-8">
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/yourusername" target="_blank" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/susmitha-vijayakumar-174a76355" target="_blank" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com/_.susmithavijayakumar._" target="_blank" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-pink-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-yellow-500">
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-2 mt-4">
+                        <div class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-red-500">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span class="text-slate-300 text-sm">susmitha.vcsc@gmail.com</span>
+                        <button onclick="copyEmail()" class="text-slate-400 hover:text-primary cursor-pointer" title="Copy email">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"></div>
+                    <img src="Images/susmitha.jpg" 
+                         alt="Profile" 
+                         class="relative w-full h-full object-cover rounded-full border-4 border-slate-800 floating">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-darker">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative w-64 h-64">
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"></div>
+                        <img src="Images/about.jpg" 
+                             alt="About" 
+                             class="relative w-full h-full object-cover rounded-2xl border-4 border-slate-800">
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-6">Who am I?</h3>
+                    <p class="text-slate-400 mb-6">
+                        I'm a passionate Data Science student who enjoys exploring data, uncovering insights, and building analytical models. I specialize in Python, data analysis, visualization, and beginner-level machine learning. I love turning raw data into meaningful stories and working on projects that solve real-world problems.
+I'm continuously learning new tools to grow into a skilled data professional.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-semibold mb-2">Name: <span class="text-slate-300">Susmitha V</span></h4>
+                            <h4 class="font-semibold mb-2">Email: <span class="text-slate-300">susmitha.vcsc@gmail.com</span></h4>
+                            <h4 class="font-semibold mb-2">Phone: <span class="text-slate-300">+91 7418266029</span></h4>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Education: <span class="text-slate-300">MSc Data Science, CIT (2024-2029)</span></h4>
+                            <h4 class="font-semibold mb-2">Location: <span class="text-slate-300">Coimbatore, Tamil Nadu</span></h4>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <button onclick="downloadResume()" class="px-6 py-3 rounded-full btn-primary font-medium">Download Resume</button>
+                        <a href="#contact" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Education</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="relative max-w-3xl mx-auto">
+                <div class="absolute left-1/2 h-full w-0.5 bg-slate-700 transform -translate-x-1/2"></div>
+                
+                <div class="mb-8 flex justify-between items-center w-full timeline-item">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="order-1 w-5/12 px-4 py-4 bg-slate-800 rounded-lg shadow-lg">
+                        <h4 class="text-lg font-bold mb-2">M.Sc. Data Science</h4>
+                        <p class="text-sm text-slate-400 mb-2">Coimbatore Institute of Technology • 2024 - 2029</p>
+                        <p class="text-slate-300">
+                            <span class="font-bold text-lg text-primary font-mono">CGPA: 7.95 (till second sem)</span><br>
+                            Currently pursuing Master's degree with 75.5% academic performance. Focusing on data science, machine learning, and statistical analysis.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mb-8 flex justify-between items-center w-full timeline-item">
+                    <div class="order-1 w-5/12 px-4 py-4 bg-slate-800 rounded-lg shadow-lg">
+                        <h4 class="text-lg font-bold mb-2">Higher Secondary Education</h4>
+                        <p class="text-sm text-slate-400 mb-2">GRD-CPF Matric Higher Secondary School, Coimbatore  • 2024</p>
+                        <p class="text-slate-300">
+                            Completed higher secondary education with 88.83% marks, building a strong foundation in science and mathematics.
+                        </p>
+                    </div>
+                    <div class="order-1 w-5/12"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-40 bg-darker">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Skills</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="relative group">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <div class="relative bg-slate-800 rounded-2xl border-2 border-slate-700 p-6 card-hover">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                                <i class="fas fa-code text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary">Software Skills</h3>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">Python</span>
+                                <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full">Intermediate</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">Java</span>
+                                <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full">Basic</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">HTML</span>
+                                <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full">Intermediate</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">CSS</span>
+                                <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full">Basic</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full">Basic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary/20 to-primary/20 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <div class="relative bg-slate-800 rounded-2xl border-2 border-slate-700 p-6 card-hover">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
+                                <i class="fas fa-chart-line text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-secondary">Data Skills</h3>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">SQL</span>
+                                <span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Intermediate</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">Power BI</span>
+                                <span class="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full">Basic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-500/20 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <div class="relative bg-slate-800 rounded-2xl border-2 border-slate-700 p-6 card-hover">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center">
+                                <i class="fas fa-palette text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-pink-500">Design Skills</h3>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">Figma</span>
+                                <span class="text-xs bg-pink-500/20 text-pink-500 px-2 py-1 rounded-full">Basic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <div class="relative bg-slate-800 rounded-2xl border-2 border-slate-700 p-6 card-hover">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                                <i class="fas fa-language text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-green-500">Languages</h3>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">English</span>
+                                <span class="text-xs bg-green-500/20 text-green-500 px-2 py-1 rounded-full">Fluent</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-slate-700/50 rounded-lg p-2">
+                                <span class="font-medium">Tamil</span>
+                                <span class="text-xs bg-green-500/20 text-green-500 px-2 py-1 rounded-full">Fluent</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Certifications</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificate 1 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                        <i class="fas fa-certificate text-6xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Data Analytics Traineeship</h3>
+                        <p class="text-slate-400 mb-4">
+                            Focused on POWER BI, including dashboard creation, data modeling, and interactive reporting.
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-slate-500">Maiyyam</span>
+                            <span class="text-sm text-slate-500">2025</span>
+                        </div>
+                        <a href="Certificates/data_analytics.pdf" target="_blank" class="text-primary hover:text-secondary">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                        <i class="fas fa-award text-6xl text-secondary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">UI/UX Design Traineeship</h3>
+                        <p class="text-slate-400 mb-4">
+                            UI/UX fundamentals and Hands-on prototyping using FIGMA.
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-slate-500">Maiyyam</span>
+                            <span class="text-sm text-slate-500">2025</span>
+                        </div>
+                        <a href="Certificates/ui-ux.pdf" target="_blank" class="text-primary hover:text-secondary">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                        <i class="fas fa-medal text-6xl text-yellow-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Full Stack(MERN) Web Development</h3>
+                        <p class="text-slate-400 mb-4">
+                            Modern Web Development with MongoDB, Express, React & Node
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm text-slate-500">Maiyyam</span>
+                            <span class="text-sm text-slate-500">2025</span>
+                        </div>
+                        <a href="Certificates/full_stack.pdf" target="_blank" class="text-primary hover:text-secondary">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-darker">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Projects</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Concert Ticket Booking" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Concert Ticket Booking</h3>
+                        <p class="text-slate-400 mb-4">
+                            A desktop application for booking concert tickets with user authentication and seat selection features.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Tkinter(GUI)</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">CSV</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/SusmithaV412/concert-ticket-booking" target="_blank" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://media.istockphoto.com/id/1065411308/photo/turning-vegetables-into-a-business.jpg?s=612x612&w=0&k=20&c=x-K3Hxb-A7Prhkb7hW5xl-Y3BsgqptvaaLlI0e4zIm8=" 
+                             alt="Farm to School" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Farm2School</h3>
+                        <p class="text-slate-400 mb-4">
+                            A web application connecting local farms with schools for fresh produce supply.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Flask (Python)</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/SusmithaV412/farm-to-school" target="_blank" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://topflightapps.com/wp-content/uploads/2022/02/develop-medicine-reminder-app-main-banner.png" 
+                             alt="Smart Medicine Reminder" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Smart Medcine Reminder and Inventory System</h3>
+                        <p class="text-slate-400 mb-4">
+                            A Java Swing desktop application for setting personalized medicine reminders, with timely pop-up notifications to support effective health management.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Java Swing</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Java</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">My SQL</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JDBC</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/SusmithaV412/smart-medicine-reminder-and-inventory-system-" target="_blank" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--<div class="text-center mt-12">
+                <a href="#" class="px-8 py-3 rounded-full btn-primary font-medium inline-flex items-center">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>-->
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark border-t-2 border-blue-500">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12"></div>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="relative w-80 md:w-96">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"></div>
+                    <div class="relative bg-slate-800 rounded-2xl border-4 border-slate-700 p-8">
+                        <div class="flex justify-center space-x-6 mb-6">
+                            <a href="https://github.com/yourusername" target="_blank" class="social-icon w-16 h-16 flex items-center justify-center rounded-full bg-slate-700 hover:bg-primary">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/susmitha-vijayakumar-174a76355" target="_blank" class="social-icon w-16 h-16 flex items-center justify-center rounded-full bg-slate-700 hover:bg-blue-600">
+                                <i class="fab fa-linkedin-in text-2xl"></i>
+                            </a>
+                            <a href="https://instagram.com/_.susmithavijayakumar._" target="_blank" class="social-icon w-16 h-16 flex items-center justify-center rounded-full bg-slate-700 hover:bg-pink-500">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-icon w-16 h-16 flex items-center justify-center rounded-full bg-slate-700 hover:bg-yellow-500">
+                                <i class="fas fa-code text-2xl"></i>
+                            </a>
+                        </div>
+                        <div class="flex justify-center items-center space-x-2 mb-4">
+                            <div class="social-icon w-16 h-16 flex items-center justify-center rounded-full bg-slate-700 hover:bg-red-500">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </div>
+                            <span class="text-slate-300">susmitha.vcsc@gmail.com</span>
+                            <button onclick="copyEmail()" class="text-slate-400 hover:text-primary cursor-pointer" title="Copy email">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="flex justify-center items-center space-x-2">
+                            <div class="social-icon w-16 h-16 flex items-center justify-center rounded-full bg-slate-700 hover:bg-green-500">
+                                <i class="fas fa-phone text-2xl"></i>
+                            </div>
+                            <span class="text-slate-300">+91 7418266029</span>
+                            <button onclick="copyPhone()" class="text-slate-400 hover:text-primary cursor-pointer" title="Copy phone">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-darker py-6 border-t-2 border-blue-500">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold gradient-text mb-6">Susmitha V</h2>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-8">
+                <a href="#home" class="text-slate-400 hover:text-primary transition">Home</a>
+                <a href="#about" class="text-slate-400 hover:text-primary transition">About</a>
+                <a href="#projects" class="text-slate-400 hover:text-primary transition">Projects</a>
+                <a href="#contact" class="text-slate-400 hover:text-primary transition">Contact</a>
+                <a href="#skills" class="text-slate-400 hover:text-primary transition">Skills</a>
+                <a href="#certificates" class="text-slate-400 hover:text-primary transition">Certifications</a>
+            </div>
+            
+            <div class="text-slate-400 space-y-2">
+                <p>Designed and Developed by <span class="font-bold">Susmitha V</span></p>
+                <p class="text-sm">Last updated: November 2025</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
